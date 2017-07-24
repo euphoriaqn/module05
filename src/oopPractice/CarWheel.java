@@ -14,7 +14,14 @@ public class CarWheel {
     public void changeTire(){
         this.tireState = 1f;
     }
-    public void eraseTire(){
-        
+    public void eraseTire(int eraseProcent){
+        this.tireState = tireState - (eraseProcent/100);
     }
+    public float getTireState(){
+        return this.tireState;
+    }
+    public void showInfoCarWheel(){
+        System.out.println("Цілісність шини складає " + tireState + " від '1'");
+    }
+
 }

@@ -31,7 +31,7 @@ public class CarDoor {
             this.isOpenClosedWindow = false;
         }
     }
-    public void showInfo(){
+    public void showInfoCarDoor(){
         if (isopenClosedDoor = false) {
             System.out.println("Дверцята в машині зачинені" );
         }
