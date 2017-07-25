@@ -15,21 +15,17 @@ public class CarDoor {
         this.isopenClosedDoor = isopenClosedDoor;
         this.isOpenClosedWindow = isOpenClosedWindow;
     }
-    public void openCloseDoor(){
+    public boolean openCloseDoor(){
         if (this.isopenClosedDoor == false){
             this.isopenClosedDoor = true;
         }
         else if (this.isopenClosedDoor == true){
-            this.isopenClosedDoor = false;
+           this.isopenClosedDoor = false;
         }
+        return isopenClosedDoor;
     }
     public void openCloseWindow(){
-        if (this.isOpenClosedWindow == false){
-            this.isOpenClosedWindow = true;
-        }
-        else if (this.isOpenClosedWindow == true){
-            this.isOpenClosedWindow = false;
-        }
+        this.isOpenClosedWindow =!this.isOpenClosedWindow;
     }
     public void showInfoCarDoor(){
         if (isopenClosedDoor = false) {

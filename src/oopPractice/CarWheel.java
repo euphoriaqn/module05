@@ -6,7 +6,7 @@ package oopPractice;
 public class CarWheel {
     private float tireState;
     public CarWheel() {
-        this.tireState = 1f;
+        this.tireState = 1;
     }
     public CarWheel(float tireState) {
         this.tireState = tireState;
@@ -15,10 +15,13 @@ public class CarWheel {
         this.tireState = 1f;
     }
     public void eraseTire(int eraseProcent){
-        this.tireState = tireState - (eraseProcent/100);
+        this.tireState = this.tireState - ((float)eraseProcent/100.0f);
     }
     public float getTireState(){
         return this.tireState;
+    }
+    public void setTireState(float tireState){
+        this.tireState = tireState;
     }
     public void showInfoCarWheel(){
         System.out.println("Цілісність шини складає " + tireState + " від '1'");

@@ -4,9 +4,10 @@ package oopPractice;
  * Created by user22 on 24.07.2017.
  */
 public class Car {
+    private int count = 0;
     CarWheel[] otherCarwheel;
     CarDoor[] otherCarDoor;
-    private int[] dateOfManufacture;
+    private int[] dateOfManufacture = new int[3];
     private String typeOfEngine;
     private int maxSpeedOfCar;
     private float accelerationTime;
@@ -47,11 +48,39 @@ public class Car {
     public  CarWheel getWheelforIndex(int index){
         return otherCarwheel[index];
     }
-    public void removeAllWheels(){
-        for (CarWheel i : otherCarwheel) {
-            otherCarwheel = null;
-
+    public void removeAllWheels() {
+        for (int i=0; i < otherCarwheel.length; i++) {
+            otherCarwheel[i].setTireState(0);
         }
     }
+    public int numberOfWheels(){
+        for (int i =0; i<otherCarwheel.length; i++)
+        {
+            if (otherCarwheel[i].getTireState() > 0){
+                count ++;
+            }
+        }
+        return count;
+    }
+ /*  public CarWheel[] addNewWheels(int index){
+
+    otherCarwheel.length + index
+    }
+ /*   public int currentMaxSpeed (){
+        int maxErasedWheel = otherCarwheel[]
+        for
+    }
+    */
+     public void showInfoCar(){
+         System.out.println("Дата виробництва " + dateOfManufacture[0] +", місяць виробництва " + dateOfManufacture[1] + " , рік виробництва " + dateOfManufacture[2]);
+         System.out.println("Тип двигуна " + typeOfEngine);
+         System.out.println("Максимальна швидкість" + maxSpeedOfCar);
+         System.out.println("Час розгону " + accelerationTime);
+         System.out.println("Загальна Кількість пасажирів " + numberOfPassanger);
+         System.out.println("Поточна кількість пасажирів " + numberOfPassangerNow);
+         System.out.println("Поточна швидкість " + currentSpeed);
+         System.out.println("Кількість колес в машині " + numberOfWheels());
+
+ }
 }
 
