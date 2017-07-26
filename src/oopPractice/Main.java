@@ -40,6 +40,8 @@ public class Main {
         ferrari.showInfoCar();
         ferrari.addNewWheels(3);
         ferrari.showInfoCar();
+        ferrari.addNewWheels(10);
+        ferrari.showInfoCar();
 
     }
 
