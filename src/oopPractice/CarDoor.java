@@ -24,6 +24,12 @@ public class CarDoor {
         }
         return isopenClosedDoor;
     }
+    public boolean getDoorState(){
+        return isopenClosedDoor;
+    }
+    public boolean getWindowState(){
+        return isOpenClosedWindow;
+    }
     public void openCloseWindow(){
         this.isOpenClosedWindow =!this.isOpenClosedWindow;
     }

@@ -47,6 +47,7 @@ public class Car {
     public  CarWheel getWheelforIndex(int index){
         return otherCarwheel[index];
     }
+    public int NumberOfPassangerNow(){return numberOfPassangerNow;}
     public void removeAllWheels() {
         for (int i=0; i < otherCarwheel.length; i++) {
             otherCarwheel[i].setTireState(0);
@@ -94,16 +95,21 @@ public class Car {
                    }
         return currentmaxSpeed;
     }
+    public void showInfoCarWheel(){
+        for (int i = 0; i <otherCarwheel.length; i++){
+
+        }
+    }
     public void showInfoCar(){
-         System.out.println("Дата виробництва " + dateOfManufacture[0] +", місяць виробництва " + dateOfManufacture[1] + " , рік виробництва " + dateOfManufacture[2]);
-         System.out.println("Тип двигуна " + typeOfEngine);
-         System.out.println("Максимальна швидкість " + maxSpeedOfCar);
-         System.out.println("Час розгону " + accelerationTime);
-         System.out.println("Загальна Кількість пасажирів " + numberOfPassanger);
-         System.out.println("Поточна кількість пасажирів " + numberOfPassangerNow);
-         System.out.println("Поточна швидкість " + currentSpeed);
-         System.out.println("Кількість цілих колес в машині " + numberOfWheels() + ", з них повністю стертих колес - " + numberOfDestroyedWheels());
-         System.out.println("Текущая максимальная скорость с учетом сноса колес " + currentMaxSpeed());
+         System.out.println("Дата виробництва - " + dateOfManufacture[0] +", місяць виробництва - " + dateOfManufacture[1] + " , рік виробництва - " + dateOfManufacture[2]);
+         System.out.println("Тип двигуна - " + typeOfEngine);
+         System.out.println("Максимальна швидкість - " + maxSpeedOfCar);
+         System.out.println("Час розгону - " + accelerationTime);
+         System.out.println("Загальна кількість пасажирів - " + numberOfPassanger);
+         System.out.println("Поточна кількість пасажирів - " + numberOfPassangerNow);
+         System.out.println("Поточна швидкість - " + currentSpeed);
+         System.out.println("Кількість цілих колес в машині - " + numberOfWheels() + ", з них повністю стертих колес - " + numberOfDestroyedWheels());
+         System.out.println("Текущая возможная максимальная скорость с учетом сноса колес - " + currentMaxSpeed());
  }
 }
 
