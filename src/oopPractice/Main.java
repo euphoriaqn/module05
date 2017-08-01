@@ -30,7 +30,8 @@ public class Main {
                         System.out.println("\nЩо ви плануєте робити?:\n 1 - Змінити поточну швидкість авто\n 2 - Додати одного пасажира в авто \n 3 - Висадити одного пасажира з авто\n" +
                                 " 4 - Висадити всіх пасажирів з авто\n 5 - Зняти всі колеса з авто \n 6 - Встановити на машину N - колес\n" +
                                 " 7 - Обрахувати поточну швидкість\n 8 - Вивести дані стосовно авто\n 9 - Відчинити або зачинити дверцята за індексом та переглянути їх стан\n" +
-                                " 10 - Відчинити або зачинити вікно за іцдексом та переглянути їх стан\n 11 - Завершити роботу програми" );
+                                " 10 - Відчинити або зачинити вікно за іцдексом та переглянути їх стан\n " +
+                                "11 - Стерти одне з колес\n 12 - Завершити роботу програми" );
                         choice = sc.nextInt();
                         if (choice >= 1 && choice <= 11) {
                             break;
@@ -142,6 +143,16 @@ public class Main {
                     }
                     break;
                 case 11:
+                    System.out.println("Яке колесо будемо зтирати? Оберіть цифру з 1 до " + ferrari.numberOfWheels());
+                    int choiceToErase = sc.nextInt();
+                    System.out.println("На скільки відстоків будемо стирати колесо?");
+                    int procentOfErase = sc.nextInt();
+                    if (choiceToErase >= 1 && choiceToErase <= ferrari.numberOfWheels()) {
+                        ferrari.otherCarwheel[choiceToErase].eraseTire(procentOfErase);
+                    }
+                    else System.out.println("Невірно введені дані!");
+                    break;
+                case 12:
                     System.out.println("Програма завершила своє функціонування!");
                     return;
                     }

@@ -109,7 +109,7 @@ public class Car {
          System.out.println("Поточна кількість пасажирів - " + numberOfPassangerNow);
          System.out.println("Поточна швидкість - " + currentSpeed);
          System.out.println("Кількість цілих колес в машині - " + numberOfWheels() + ", з них повністю стертих колес - " + numberOfDestroyedWheels());
-         System.out.println("Текущая возможная максимальная скорость с учетом сноса колес - " + currentMaxSpeed());
+         System.out.println("Поточна можлива максимальна швидкість з урахуванням зтертості шин - " + currentMaxSpeed());
  }
 }
 

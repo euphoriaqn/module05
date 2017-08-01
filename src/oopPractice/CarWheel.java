@@ -15,7 +15,9 @@ public class CarWheel {
         this.tireState = 1f;
     }
     public void eraseTire(int eraseProcent){
-        this.tireState = this.tireState - ((float)eraseProcent/100.0f);
+        float diffOFTireErase = this.tireState - ((float)eraseProcent/100.0f);
+        if (diffOFTireErase < 0) System.out.println("Ви ризикуєте почати стирати диски!Зупиністься!!!");
+        else this.tireState = diffOFTireErase;
     }
     public float getTireState(){
         return this.tireState;
