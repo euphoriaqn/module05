@@ -9,11 +9,21 @@ public class Main {
         int price = p1.getPrice();
         System.out.println("His price " + price);
 
+        Player2 p2 = new Player2(150);
+        p2.playSong();
+
         Player3 p3 = new Player3(200);
-        p3.playlistPlayer3.playAllSongs();
+        p3.playAllSongs();
 
 
         Player4 p4 = new Player4(400);
-        p4.playlistPlayer4.playAllSongs();
+        p4.playAllSongs();
+
+        Player5 p5 = new Player5(500);
+        p5.playAllSongs();
+
+        Player6 p6 = new Player6(600);
+        p6.shuffle();
+        p6.playAllSongs();
     }
 }
