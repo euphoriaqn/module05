@@ -5,5 +5,5 @@ package mp3player;
  */
 public interface ISong {
     String song1 = "The Best Song";
-    public void playSong();
+    public String playSong();
 }

@@ -1,5 +1,8 @@
 package mp3player;
 
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
+
 /**
  * Created by user22 on 10.08.2017.
  */
@@ -11,7 +14,17 @@ public class Player2 extends MainMp3 {
     }
 
     @Override
-    public void playSong() {
-        System.out.println("error!!!");
+    public String playSong() {
+        String playingSong = "error!!!";
+        return playingSong;
+    }
+    @Override
+    public void show(Pane root) {
+
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+
     }
 }

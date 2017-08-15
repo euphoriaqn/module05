@@ -1,4 +1,7 @@
 package mp3player;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
+
 import java.util.Random;
 
 /**
@@ -11,8 +14,9 @@ public class Player6 extends ManyFunctionalPlayer{
     }
 
     @Override
-    public void playSong() {
-        System.out.println("Playing " + playlist[0]);
+    public String playSong() {
+        String playingSong = "Playing " + playlist[0];
+        return playingSong;
     }
     public void shuffle(){
         Random rnd = new Random();
@@ -22,5 +26,14 @@ public class Player6 extends ManyFunctionalPlayer{
             playlist[index] = playlist[i];
             playlist[i] = tmp;
         }
+    }
+    @Override
+    public void show(Pane root) {
+
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+
     }
 }

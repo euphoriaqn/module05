@@ -1,5 +1,8 @@
 package mp3player;
 
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
+
 /**
  * Created by user22 on 10.08.2017.
  */
@@ -11,7 +14,17 @@ public class Player4 extends ManyFunctionalPlayer{
     }
 
     @Override
-    public void playSong() {
-        System.out.println("Playing " + playlist[playlist.length-1]);
+    public String  playSong() {
+        String playingSong = "Playing " + playlist[playlist.length-1];
+        return playingSong;
+    }
+    @Override
+    public void show(Pane root) {
+
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+
     }
 }
